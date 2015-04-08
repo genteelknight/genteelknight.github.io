@@ -30,7 +30,9 @@
   <!-- <link rel="canonical" href="http://www.example.com/"> -->
 
   <!-- Weking Stylesheet -->
-  <link rel="stylesheet" href="dist/css/weking.min.css">
+  <link rel="stylesheet" href="dist/css/weking.css">
+  <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.min.css">
+  <link rel="stylesheet" href="dist/css/weking-theme.css">
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -39,6 +41,293 @@
   <![endif]-->
 </head>
 <body>
-  <h1>Constantine Karnaukhov Portfolio</h1>
+  <!-- HEADER -->
+  <header class="header row">
+    <!-- IMAGE -->
+    <div class="header_img col col_sm6"></div>
+
+    <!-- HEADLINE -->
+    <div class="header_headline col col_sm6">
+      <i class="icon icon_polymer"></i>
+      <h1 class="typo_display2">Hello,<br/>I'm Constantine Karnaukhov</h1>
+      <h2 class="typo_h2">Web Developer</h2>
+
+      <nav class="header_navbar">
+        <ul>
+          <li class="-active"><a href="#">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ABOUT ME -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="typo_display2">Who am I</h2>
+      <p>Hi. I'm Constantine Karnaukhov. I'm web-developer, student, hip-hop lover, think about startup.</p>
+      <p>My Skills</p>
+
+      <div class="about_skills">
+
+        <p>HTML: 99.9%</p>
+        <div class="progress progress-orange">
+          <div class="progress_bar" style="width: 99.9%"></div>
+        </div>
+
+        <p>CSS: 95% <span>(CSS3, Less and other css preprocessor)</span></p>
+        <div class="progress progress-blue">
+          <div class="progress_bar" style="width: 95%"></div>
+        </div>
+
+        <p>JavaScript: 75% <span>(Vanilla JS, AngularJS, jQuery)</span></p>
+        <div class="progress progress-red">
+          <div class="progress_bar" style="width: 75%"></div>
+        </div>
+
+        <p>WordPress: 55% <span>(Themes, Small plugins)</span></p>
+        <div class="progress progress-green">
+          <div class="progress_bar" style="width: 55%"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects row" id="projects">
+    <div class="projects_header col col_sm4">
+      <h2 class="typo_h2">Projects</h2>
+      <p>that created by me or I worked in.</p>
+      <p>Swipe gallery to see all.</p>
+    </div>
+
+    <div class="projects_list col col_sm8">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <!-- Go2Event -->
+          <article class="projects_list_item swiper-slide">
+            <div class="card row row-gutters">
+              <div class="col col_xs6">Image</div>
+              <div class="col col_xs6">
+                <h3 class="typo_h3">Go2Event</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi consequuntur doloremque eaque, eius eligendi est et exercitationem impedit ipsam magnam obcaecati quae quibusdam quo sapiente? Consequatur id qui vero.</p>
+                <p><label for="project1" class="btn btn-default-flat">Read More</label></p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Weking -->
+          <article class="projects_list_item swiper-slide">
+            <div class="card row row-gutters">
+              <div class="col col_xs6">Image</div>
+              <div class="col col_xs6">
+                <h3 class="typo_h3">Weking</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi consequuntur doloremque eaque, eius eligendi est et exercitationem impedit ipsam magnam obcaecati quae quibusdam quo sapiente? Consequatur id qui vero.</p>
+                <p><label for="project2" class="btn btn-default-flat">Read More</label></p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Selfie Print -->
+          <article class="projects_list_item swiper-slide">
+            <div class="card row row-gutters">
+              <div class="col col_xs6">Image</div>
+              <div class="col col_xs6">
+                <h3 class="typo_h3">Selfie Print</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi consequuntur doloremque eaque, eius eligendi est et exercitationem impedit ipsam magnam obcaecati quae quibusdam quo sapiente? Consequatur id qui vero.</p>
+                <p><label for="project3" class="btn btn-default-flat">Read More</label></p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Electron -->
+          <article class="projects_list_item swiper-slide">
+            <div class="card row row-gutters">
+              <div class="col col_xs6">Image</div>
+              <div class="col col_xs6">
+                <h3 class="typo_h3">Electron</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi consequuntur doloremque eaque, eius eligendi est et exercitationem impedit ipsam magnam obcaecati quae quibusdam quo sapiente? Consequatur id qui vero.</p>
+                <p><label for="project4" class="btn btn-default-flat">Read More</label></p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS MODALS -->
+  <section class="projectModals">
+    <!-- Go2Event -->
+    <input type="checkbox" class="modal_trigger" id="project1" name="project1" />
+    <div class="modal">
+      <div class="modal_dialog col col_xs12_sm10">
+        <header class="modal_header">
+          <h3 class="typo_display2">Go2Event</h3>
+          <hr/>
+          <p>All Samara events in one place</p>
+          <p><label for="project1-details" class="btn btn-orange-flat">Show details +</label></p>
+          <label for="project1" class="modal_header_close">
+            <i class="icon icon_close"></i>
+          </label>
+        </header>
+        <article class="modal_content">
+          <input id="project1-details" class="accordion_trigger" name="accordion_trigger" type="checkbox" />
+          <div class="projectDetails accordion_content">
+            <div class="col col_sm8">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nemo optio quasi sit vero. Asperiores cumque officia quia voluptatem? Aliquam commodi dolor labore, magnam minima nobis pariatur quaerat quis voluptates.</p>
+            </div>
+            <div class="col col_sm4">
+              <ul>
+                <li><strong>Role</strong> <span>Lead front-end developer</span></li>
+                <li><strong>Date</strong> <span>2014-now</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <img src="dist/img/go2event_screenshot.png" alt="Go2Event Screenshot"/>
+        </article>
+      </div>
+    </div>
+
+    <!-- Weking -->
+    <input type="checkbox" class="modal_trigger" id="project2" name="project2" />
+    <div class="modal">
+      <div class="modal_dialog col col_xs12_sm10">
+        <header class="modal_header">
+          <h3 class="typo_display2">Weking</h3>
+          <hr/>
+          <p>A brand-new modern, responsive and flexible front-end framework</p>
+          <p><label for="project2-details" class="btn btn-orange-flat">Show details +</label></p>
+          <label for="project2" class="modal_header_close">
+            <i class="icon icon_close"></i>
+          </label>
+        </header>
+        <article class="modal_content">
+          <input id="project2-details" class="accordion_trigger" name="accordion_trigger" type="checkbox" />
+          <div class="projectDetails accordion_content">
+            <div class="col col_sm8">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nemo optio quasi sit vero. Asperiores cumque officia quia voluptatem? Aliquam commodi dolor labore, magnam minima nobis pariatur quaerat quis voluptates.</p>
+            </div>
+            <div class="col col_sm4">
+              <ul>
+                <li><strong>Role</strong> <span>Owner, Lead front-end developer</span></li>
+                <li><strong>Date</strong> <span>2014-now</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <img src="dist/img/weking_screenshot.png" alt="Weking Screenshot"/>
+        </article>
+      </div>
+    </div>
+
+    <!-- Selfie Print -->
+    <input type="checkbox" class="modal_trigger" id="project3" name="project3" />
+    <div class="modal">
+      <div class="modal_dialog col col_xs12_sm10">
+        <header class="modal_header">
+          <h3 class="typo_display2">Selfie Print</h3>
+          <hr/>
+          <p>App for printing selfies from Instagram</p>
+          <p><label for="project3-details" class="btn btn-orange-flat">Show details +</label></p>
+          <label for="project3" class="modal_header_close">
+            <i class="icon icon_close"></i>
+          </label>
+        </header>
+        <article class="modal_content">
+          <input id="project3-details" class="accordion_trigger" name="accordion_trigger" type="checkbox" />
+          <div class="projectDetails accordion_content">
+            <div class="col col_sm8">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nemo optio quasi sit vero. Asperiores cumque officia quia voluptatem? Aliquam commodi dolor labore, magnam minima nobis pariatur quaerat quis voluptates.</p>
+            </div>
+            <div class="col col_sm4">
+              <ul>
+                <li><strong>Role</strong> <span>Owner, Lead front-end developer</span></li>
+                <li><strong>Date</strong> <span>2014-now</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <img src="dist/img/selfieprint_screenshot.png" alt="Selfie Print Screenshot"/>
+        </article>
+      </div>
+    </div>
+
+    <!-- Electron -->
+    <input type="checkbox" class="modal_trigger" id="project4" name="project4" />
+    <div class="modal">
+      <div class="modal_dialog col col_xs12_sm10">
+        <header class="modal_header">
+          <h3 class="typo_display2">Electron</h3>
+          <hr/>
+          <p>Theme for Weking</p>
+          <p><label for="project4-details" class="btn btn-orange-flat">Show details +</label></p>
+          <label for="project4" class="modal_header_close">
+            <i class="icon icon_close"></i>
+          </label>
+        </header>
+        <article class="modal_content">
+          <input id="project4-details" class="accordion_trigger" name="accordion_trigger" type="checkbox" />
+          <div class="projectDetails accordion_content">
+            <div class="col col_sm8">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nemo optio quasi sit vero. Asperiores cumque officia quia voluptatem? Aliquam commodi dolor labore, magnam minima nobis pariatur quaerat quis voluptates.</p>
+            </div>
+            <div class="col col_sm4">
+              <ul>
+                <li><strong>Role</strong> <span>Lead front-end developer</span></li>
+                <li><strong>Date</strong> <span>2014-now</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <img src="dist/img/electron_screenshot.png" alt="Electron Screenshot"/>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2 class="typo_h2">Get in Touch</h2>
+
+    <span class="tooltip tooltip-bottom" data-tooltip="VK">
+      <a target="_blank" class="contact_icon contact_vk" href="http://vk.com/genteelknight"></a>
+    </span>
+    <span class="tooltip tooltip-bottom" data-tooltip="Google+">
+      <a target="_blank" class="contact_icon contact_gPlus" href="#"></a>
+    </span>
+    <span class="tooltip tooltip-bottom" data-tooltip="Twitter">
+      <a target="_blank" class="contact_icon contact_twitter" href="https://twitter.com/genteelknight"></a>
+    </span>
+    <span class="tooltip tooltip-bottom" data-tooltip="Github">
+      <a target="_blank" class="contact_icon contact_github" href="https://github.com/genteelknight"></a>
+    </span>
+    <span class="tooltip tooltip-bottom" data-tooltip="Send Me Email">
+      <a target="_blank" class="contact_icon contact_mail icon icon_mail" href="mailto:genteelknight@gmail.com"></a>
+    </span>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; Constantine Karnaukhov - All Rights Reserved<br/>
+      This site was built with <a href="http://weking.github.io">Weking</a></p>
+
+      <p>
+        <a href="#" class="footer_toTop">
+          <i class="icon icon_expand-less"></i>
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- JScripts -->
+  <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
+  <script src="dist/js/index.js"></script>
 </body>
 </html>

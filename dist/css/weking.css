@@ -140,7 +140,7 @@ body {
   position: relative;
   background-color: #ffffff;
   color: #212121;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   font-family: Roboto, sans-serif;
 }
@@ -155,18 +155,22 @@ body {
 .typo_display3 {
   font-size: 56px;
   line-height: 72px;
+  font-weight: normal;
 }
 .typo_display2 {
   font-size: 45px;
   line-height: 48px;
+  font-weight: normal;
 }
 .typo_display1 {
   font-size: 34px;
   line-height: 48px;
+  font-weight: normal;
 }
 .typo_headline {
   font-size: 24px;
   line-height: 24px;
+  font-weight: normal;
 }
 .typo_title {
   font-size: 20px;
@@ -176,10 +180,12 @@ body {
 .typo_subhead {
   font-size: 16px;
   line-height: 24px;
+  font-weight: normal;
 }
 .typo_caption {
   font-size: 12px;
   line-height: 24px;
+  font-weight: normal;
 }
 .typo_h1,
 h1,
@@ -198,32 +204,32 @@ h6 {
 }
 .typo_h1,
 h1 {
-  font-size: 52.5px;
+  font-size: 60px;
   line-height: 72px;
 }
 .typo_h2,
 h2 {
-  font-size: 42px;
+  font-size: 48px;
   line-height: 48px;
 }
 .typo_h3,
 h3 {
-  font-size: 31.5px;
+  font-size: 36px;
   line-height: 48px;
 }
 .typo_h4,
 h4 {
-  font-size: 21px;
+  font-size: 24px;
   line-height: 24px;
 }
 .typo_h5,
 h5 {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
 }
 .typo_h6,
 h6 {
-  font-size: 10.5px;
+  font-size: 12px;
   line-height: 24px;
 }
 blockquote {
@@ -324,8 +330,8 @@ kbd {
 code,
 kbd {
   padding: 2px 4px;
-  font-size: 12.6px;
-  line-height: 12.6px;
+  font-size: 14.4px;
+  line-height: 14.4px;
   color: #e53935;
   white-space: nowrap;
   background: #eeeeee;
@@ -339,7 +345,7 @@ kbd {
 pre {
   display: block;
   padding: 0 16px;
-  font-size: 12.6px;
+  font-size: 14.4px;
   color: #212121;
   background: #eeeeee;
   outline: 1px solid #bdbdbd;
@@ -1000,7 +1006,7 @@ input[type="checkbox"]:focus:invalid:focus {
   width: 100%;
   padding-bottom: 11px;
   margin-bottom: 12px;
-  font-size: 16.1px;
+  font-size: 18.4px;
   font-weight: 700;
   color: #212121;
   border-bottom: 1px solid #b0b0b0;
@@ -1277,7 +1283,7 @@ textarea {
   background: #f5f5f5;
 }
 .table_caption {
-  font-size: 11.9px;
+  font-size: 13.6px;
   line-height: 24px;
   font-style: italic;
   padding: 24px 0;
@@ -1285,7 +1291,7 @@ textarea {
 }
 .table td,
 .table th {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   padding: 12px;
   margin: 0;
@@ -1472,7 +1478,7 @@ textarea {
 }
 .menu_li[class*=parent] > .menu_a:after {
   content: " \25BE";
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   vertical-align: middle;
 }
@@ -4210,7 +4216,7 @@ textarea {
 }
 .dropdown_title:after {
   content: " \25BE";
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   vertical-align: middle;
   float: right;
@@ -4357,7 +4363,7 @@ textarea {
   display: inline;
   background: #8a8a8a;
   padding: 2px 10px;
-  font-size: 10.5px;
+  font-size: 12px;
   line-height: 24px;
   font-weight: bold;
   color: #ffffff;
@@ -4861,7 +4867,7 @@ textarea {
 .pricing_plan_price span {
   display: block;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #ffffff;
