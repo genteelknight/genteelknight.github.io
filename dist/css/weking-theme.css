@@ -25,9 +25,8 @@ body {
   height: 100%;
 }
 .header_img {
-  background: #bdbdbd url(../img/header_img.jpg);
-  -webkit-background-size: cover;
-  background-size: cover;
+  background: #bdbdbd url(../img/header_img.jpg) no-repeat;
+  background-size: 100% auto;
 }
 .header_headline {
   padding: 72px;
