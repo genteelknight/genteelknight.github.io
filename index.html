@@ -6,7 +6,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Constantine Karnaukhov Portfolio</title>
+  <title>Константин Карнаухов - веб-разработчик HTML, CSS, Less & Sass , JavaScript, AngularJS, WordPress</title>
 
   <!-- FAVICONS -->
   <!-- Default -->
@@ -30,9 +30,9 @@
   <!-- <link rel="canonical" href="http://www.example.com/"> -->
 
   <!-- Weking Stylesheet -->
-  <link rel="stylesheet" href="dist/css/weking.css">
+  <link rel="stylesheet" href="dist/css/weking.min.css">
   <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.min.css">
-  <link rel="stylesheet" href="dist/css/weking-theme.css">
+  <link rel="stylesheet" href="dist/css/weking-theme.min.css">
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -49,15 +49,14 @@
     <!-- HEADLINE -->
     <div class="header_headline col col_sm6">
       <i class="icon icon_polymer"></i>
-      <h1 class="typo_display2">Hello,<br/>I'm Constantine Karnaukhov</h1>
+      <h1 class="typo_display2">Привет,<br/>я Константин Карнаухов</h1>
       <h2 class="typo_h2">Web Developer</h2>
 
       <nav class="header_navbar">
         <ul>
-          <li class="-active"><a href="#">home</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#projects">projects</a></li>
-          <li><a href="#contact">contact</a></li>
+          <li><a href="#about">обо мне</a></li>
+          <li><a href="#projects">проекты</a></li>
+          <li><a href="#contact">контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -66,9 +65,9 @@
   <!-- ABOUT ME -->
   <section class="about" id="about">
     <div class="container">
-      <h2 class="typo_display2">Who am I</h2>
-      <p>Hi. I'm Constantine Karnaukhov. I'm web-developer, student, hip-hop lover, think about startup.</p>
-      <p>My Skills</p>
+      <h2 class="typo_display2">Кто я?!</h2>
+      <p>Привет. Я Константин Карнаухов. Я веб-разработчик, студент, любитель хип-хопа, думаю о стартапе.</p>
+      <p>Мои навыки</p>
 
       <div class="about_skills">
 
@@ -77,7 +76,7 @@
           <div class="progress_bar" style="width: 99.9%"></div>
         </div>
 
-        <p>CSS: 95% <span>(CSS3, Less and other css preprocessor)</span></p>
+        <p>CSS: 95% <span>(CSS3, CSS препроцессоры)</span></p>
         <div class="progress progress-blue">
           <div class="progress_bar" style="width: 95%"></div>
         </div>
@@ -87,7 +86,7 @@
           <div class="progress_bar" style="width: 75%"></div>
         </div>
 
-        <p>WordPress: 55% <span>(Themes, Small plugins)</span></p>
+        <p>WordPress: 55% <span>(Темы и простые плагины)</span></p>
         <div class="progress progress-green">
           <div class="progress_bar" style="width: 55%"></div>
         </div>
@@ -99,9 +98,9 @@
   <!-- PROJECTS -->
   <section class="projects row" id="projects">
     <div class="projects_header col col_sm4">
-      <h2 class="typo_h2">Projects</h2>
-      <p>that created by me or I worked in.</p>
-      <p>Swipe gallery to see all.</p>
+      <h2 class="typo_h2">Проекты,</h2>
+      <p>созданные мною или в которых я участвую.</p>
+      <p>Листай галерею чтобы посмотреть все.</p>
     </div>
 
     <div class="projects_list col col_sm8">
@@ -109,48 +108,52 @@
         <div class="swiper-wrapper">
           <!-- Go2Event -->
           <article class="projects_list_item swiper-slide">
-            <div class="card row row-gutters">
-              <div class="col col_xs6">Image</div>
-              <div class="col col_xs6">
+            <div class="card row">
+              <div class="col col_sm6">
+                <img src="dist/img/go2event_small.png" alt="Go2Event Logo"/>
+              </div>
+              <div class="col col_sm6">
                 <h3 class="typo_h3">Go2Event</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi consequuntur doloremque eaque, eius eligendi est et exercitationem impedit ipsam magnam obcaecati quae quibusdam quo sapiente? Consequatur id qui vero.</p>
-                <p><label for="project1" class="btn btn-default-flat">Read More</label></p>
+                <p>Структурированный сервис тематически-образовательных мероприятий с использованием геолокационных технологий</p>
+                <p><label for="project1" class="btn btn-default-flat">Подробнее</label></p>
               </div>
             </div>
           </article>
 
           <!-- Weking -->
           <article class="projects_list_item swiper-slide">
-            <div class="card row row-gutters">
-              <div class="col col_xs6">Image</div>
-              <div class="col col_xs6">
+            <div class="card row">
+              <div class="col col_sm6">
+                <img src="dist/img/weking_small.jpg" alt="Weking Logo"/>
+              </div>
+              <div class="col col_sm6">
                 <h3 class="typo_h3">Weking</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi consequuntur doloremque eaque, eius eligendi est et exercitationem impedit ipsam magnam obcaecati quae quibusdam quo sapiente? Consequatur id qui vero.</p>
-                <p><label for="project2" class="btn btn-default-flat">Read More</label></p>
+                <p>Новый модульный, современный, адаптивный и гибкий фронтэнд фреймворк</p>
+                <p><label for="project2" class="btn btn-default-flat">Подробнее</label></p>
               </div>
             </div>
           </article>
 
           <!-- Selfie Print -->
           <article class="projects_list_item swiper-slide">
-            <div class="card row row-gutters">
-              <div class="col col_xs6">Image</div>
-              <div class="col col_xs6">
+            <div class="card row">
+              <div class="col col_sm6">Image</div>
+              <div class="col col_sm6">
                 <h3 class="typo_h3">Selfie Print</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi consequuntur doloremque eaque, eius eligendi est et exercitationem impedit ipsam magnam obcaecati quae quibusdam quo sapiente? Consequatur id qui vero.</p>
-                <p><label for="project3" class="btn btn-default-flat">Read More</label></p>
+                <p>Приложение для печати фотографий из Instagram</p>
+                <p><label for="project3" class="btn btn-default-flat">Подробнее</label></p>
               </div>
             </div>
           </article>
 
           <!-- Electron -->
           <article class="projects_list_item swiper-slide">
-            <div class="card row row-gutters">
-              <div class="col col_xs6">Image</div>
-              <div class="col col_xs6">
+            <div class="card row">
+              <div class="col col_sm6">Image</div>
+              <div class="col col_sm6">
                 <h3 class="typo_h3">Electron</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi consequuntur doloremque eaque, eius eligendi est et exercitationem impedit ipsam magnam obcaecati quae quibusdam quo sapiente? Consequatur id qui vero.</p>
-                <p><label for="project4" class="btn btn-default-flat">Read More</label></p>
+                <p>Тема (шаблон) для Weking</p>
+                <p><label for="project4" class="btn btn-default-flat">Подробнее</label></p>
               </div>
             </div>
           </article>
@@ -167,10 +170,10 @@
     <div class="modal">
       <div class="modal_dialog col col_xs12_sm10">
         <header class="modal_header">
-          <h3 class="typo_display2">Go2Event</h3>
+          <h3 class="typo_display2"><a href="http://go2event.ru" target="_blank">Go2Event</a></h3>
           <hr/>
-          <p>All Samara events in one place</p>
-          <p><label for="project1-details" class="btn btn-orange-flat">Show details +</label></p>
+          <p>Структурированный сервис тематически-образовательных мероприятий с использованием геолокационных технологий</p>
+          <p><label for="project1-details" class="btn btn-orange-flat">Показать детали +</label></p>
           <label for="project1" class="modal_header_close">
             <i class="icon icon_close"></i>
           </label>
@@ -179,17 +182,20 @@
           <input id="project1-details" class="accordion_trigger" name="accordion_trigger" type="checkbox" />
           <div class="projectDetails accordion_content">
             <div class="col col_sm8">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nemo optio quasi sit vero. Asperiores cumque officia quia voluptatem? Aliquam commodi dolor labore, magnam minima nobis pariatur quaerat quis voluptates.</p>
+              <p>У Вас будет доступ к различным тематическим мероприятиям (конференции, форумы, выставки, конкурсы и т.п.) по средствам геолокации (GPS, IP-адрес, Wi-Fi, мобильные соты). Сервис определит Ваше местоположение и исходя из этого покажет возможные мероприятия, которые находятся от Вас в непосредственной близости. Также Вы сможете найти какое-то конкретное событие и посмотреть все события на полной карте. Кроме этого, имеется возможность отметиться на том или ином мероприятии в списке участников, предварительно авторизовавшись через одну из популярных социальных сетей.</p>
+              <p>В данном проекте я занимаю роль фронт-энд разработчика. Я отвечаю за разработку интерфейса и частично за его дизайн.</p>
             </div>
             <div class="col col_sm4">
               <ul>
-                <li><strong>Role</strong> <span>Lead front-end developer</span></li>
-                <li><strong>Date</strong> <span>2014-now</span></li>
+                <li><strong>Роль</strong> <span>Активный front-end разрабтчик</span></li>
+                <li><strong>Дата</strong> <span>2014-now</span></li>
               </ul>
             </div>
           </div>
 
-          <img src="dist/img/go2event_screenshot.png" alt="Go2Event Screenshot"/>
+          <a href="http://go2event.ru" target="_blank">
+            <img src="dist/img/go2event_screenshot.png" alt="Go2Event Screenshot"/>
+          </a>
         </article>
       </div>
     </div>
@@ -199,10 +205,10 @@
     <div class="modal">
       <div class="modal_dialog col col_xs12_sm10">
         <header class="modal_header">
-          <h3 class="typo_display2">Weking</h3>
+          <h3 class="typo_display2"><a href="http://weking.github.io" target="_blank">Weking</a></h3>
           <hr/>
-          <p>A brand-new modern, responsive and flexible front-end framework</p>
-          <p><label for="project2-details" class="btn btn-orange-flat">Show details +</label></p>
+          <p>Новый модульный, современный, адаптивный и гибкий фронтэнд фреймворк</p>
+          <p><label for="project2-details" class="btn btn-orange-flat">Показать детали +</label></p>
           <label for="project2" class="modal_header_close">
             <i class="icon icon_close"></i>
           </label>
@@ -211,17 +217,20 @@
           <input id="project2-details" class="accordion_trigger" name="accordion_trigger" type="checkbox" />
           <div class="projectDetails accordion_content">
             <div class="col col_sm8">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nemo optio quasi sit vero. Asperiores cumque officia quia voluptatem? Aliquam commodi dolor labore, magnam minima nobis pariatur quaerat quis voluptates.</p>
+              <p>Weking - гибкий модульный фронтэнд фреймворк. Иными словами конструктор, из которого можно слепить сайт по кирпичикам. От конкурентов отличается своим гибким БЭМ-подходом к разработке интерфейса и меньшим размером дистрибутива, на сколько это возможно.</p>
+              <p>Это проект реализован моими собственными силами. Идея принадлеит мне.</p>
             </div>
             <div class="col col_sm4">
               <ul>
-                <li><strong>Role</strong> <span>Owner, Lead front-end developer</span></li>
-                <li><strong>Date</strong> <span>2014-now</span></li>
+                <li><strong>Роль</strong> <span>Owner, Lead front-end developer</span></li>
+                <li><strong>Дата</strong> <span>2014-now</span></li>
               </ul>
             </div>
           </div>
 
-          <img src="dist/img/weking_screenshot.png" alt="Weking Screenshot"/>
+          <a href="http://weking.github.io" target="_blank">
+            <img src="dist/img/weking_screenshot.png" alt="Weking Screenshot"/>
+          </a>
         </article>
       </div>
     </div>
@@ -231,10 +240,10 @@
     <div class="modal">
       <div class="modal_dialog col col_xs12_sm10">
         <header class="modal_header">
-          <h3 class="typo_display2">Selfie Print</h3>
+          <h3 class="typo_display2"><a href="http://selfieprint.github.io/" target="_blank">Selfie Print</a></h3>
           <hr/>
-          <p>App for printing selfies from Instagram</p>
-          <p><label for="project3-details" class="btn btn-orange-flat">Show details +</label></p>
+          <p>Приложение для печати фотографий из Instagram</p>
+          <p><label for="project3-details" class="btn btn-orange-flat">Показать детали +</label></p>
           <label for="project3" class="modal_header_close">
             <i class="icon icon_close"></i>
           </label>
@@ -247,13 +256,15 @@
             </div>
             <div class="col col_sm4">
               <ul>
-                <li><strong>Role</strong> <span>Owner, Lead front-end developer</span></li>
-                <li><strong>Date</strong> <span>2014-now</span></li>
+                <li><strong>Роль</strong> <span>Owner, Lead front-end developer</span></li>
+                <li><strong>Дата</strong> <span>2014-now</span></li>
               </ul>
             </div>
           </div>
 
-          <img src="dist/img/selfieprint_screenshot.png" alt="Selfie Print Screenshot"/>
+          <a href="http://selfieprint.github.io/" target="_blank">
+            <img src="dist/img/selfieprint_screenshot.png" alt="Selfie Print Screenshot"/>
+          </a>
         </article>
       </div>
     </div>
@@ -263,10 +274,10 @@
     <div class="modal">
       <div class="modal_dialog col col_xs12_sm10">
         <header class="modal_header">
-          <h3 class="typo_display2">Electron</h3>
+          <h3 class="typo_display2"><a href="http://genteelknight.github.io/electron" target="_blank">Electron</a></h3>
           <hr/>
-          <p>Theme for Weking</p>
-          <p><label for="project4-details" class="btn btn-orange-flat">Show details +</label></p>
+          <p>Тема (шаблон) для Weking</p>
+          <p><label for="project4-details" class="btn btn-orange-flat">Показать детали +</label></p>
           <label for="project4" class="modal_header_close">
             <i class="icon icon_close"></i>
           </label>
@@ -275,17 +286,19 @@
           <input id="project4-details" class="accordion_trigger" name="accordion_trigger" type="checkbox" />
           <div class="projectDetails accordion_content">
             <div class="col col_sm8">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nemo optio quasi sit vero. Asperiores cumque officia quia voluptatem? Aliquam commodi dolor labore, magnam minima nobis pariatur quaerat quis voluptates.</p>
+              <p>Это простой шаблон, написанный мною под фреймворк Weking. Идея для лейаута взята со старого дизайна сайта <a href="http://elementaryos.org/" target="_blank">elementary OS</a> и его представления в Material Design.</p>
             </div>
             <div class="col col_sm4">
               <ul>
-                <li><strong>Role</strong> <span>Lead front-end developer</span></li>
-                <li><strong>Date</strong> <span>2014-now</span></li>
+                <li><strong>Роль</strong> <span>Front-end developer</span></li>
+                <li><strong>Дата</strong> <span>2015</span></li>
               </ul>
             </div>
           </div>
 
-          <img src="dist/img/electron_screenshot.png" alt="Electron Screenshot"/>
+          <a href="http://genteelknight.github.io/electron" target="_blank">
+            <img src="dist/img/electron_screenshot.png" alt="Electron Screenshot"/>
+          </a>
         </article>
       </div>
     </div>
@@ -293,9 +306,9 @@
 
   <!-- CONTACT -->
   <section class="contact" id="contact">
-    <h2 class="typo_h2">Get in Touch</h2>
+    <h2 class="typo_h2">Контакты</h2>
 
-    <span class="tooltip tooltip-bottom" data-tooltip="VK">
+    <span class="tooltip tooltip-bottom" data-tooltip="Вконтакте">
       <a target="_blank" class="contact_icon contact_vk" href="http://vk.com/genteelknight"></a>
     </span>
     <span class="tooltip tooltip-bottom" data-tooltip="Google+">
@@ -307,7 +320,7 @@
     <span class="tooltip tooltip-bottom" data-tooltip="Github">
       <a target="_blank" class="contact_icon contact_github" href="https://github.com/genteelknight"></a>
     </span>
-    <span class="tooltip tooltip-bottom" data-tooltip="Send Me Email">
+    <span class="tooltip tooltip-bottom" data-tooltip="Написать мне Email">
       <a target="_blank" class="contact_icon contact_mail icon icon_mail" href="mailto:genteelknight@gmail.com"></a>
     </span>
   </section>
@@ -315,8 +328,8 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; Constantine Karnaukhov - All Rights Reserved<br/>
-      This site was built with <a href="http://weking.github.io">Weking</a></p>
+      <p>&copy; Константин Карнаухов - Все права защищены<br/>
+      Сайт создан с <a href="http://weking.github.io">Weking</a></p>
 
       <p>
         <a href="#" class="footer_toTop">

@@ -147,6 +147,16 @@ body {
     &_item {
       .lh-box-sizing(~"border-box");
       padding: @font-line-height/2;
+
+      .col:first-child {
+        padding-right: @grid-baseline*2;
+      }
+
+      img {
+        margin: 0;
+        .lh-border-top-left-radius(@basic-radius);
+        .lh-border-bottom-left-radius(@basic-radius);
+      }
     }
   }
 }
@@ -248,6 +258,10 @@ body {
     padding: @font-line-height 0;
     background: @orange200;
     text-align: center;
+
+    .typo_display2 a {
+      color: @text-color;
+    }
 
     hr {
       width: 100px;

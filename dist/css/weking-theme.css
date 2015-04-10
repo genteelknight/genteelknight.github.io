@@ -102,6 +102,18 @@ body {
   box-sizing: border-box;
   padding: 12px;
 }
+.projects_list_item .col:first-child {
+  padding-right: 16px;
+}
+.projects_list_item img {
+  margin: 0;
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-left-radius: 3px;
+}
 .contact {
   background: #212121 url(../img/contact.jpg);
   color: #ffffff;
@@ -183,6 +195,9 @@ body {
   padding: 24px 0;
   background: #ffcc80;
   text-align: center;
+}
+.modal_header .typo_display2 a {
+  color: #212121;
 }
 .modal_header hr {
   width: 100px;
