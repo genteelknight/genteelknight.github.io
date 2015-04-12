@@ -101,7 +101,6 @@ body {
 }
 .projects_list .swiper-container {
   width: 100%;
-  height: 336px;
 }
 .projects_list .swiper-pagination {
   text-align: left;
