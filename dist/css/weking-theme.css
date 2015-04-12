@@ -17,21 +17,29 @@ body {
   padding: 8px;
   background: #212121;
 }
-.header {
-  height: 100vh;
-}
-.header_img,
-.header_headline {
-  height: 100%;
+@media (min-width: 768px) {
+  .header {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .header_img {
   background: #bdbdbd url(../img/header_img.jpg) no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
+  min-height: 500px;
 }
 .header_headline {
-  padding: 72px;
+  padding: 24px;
   background: #212121;
   color: #ffffff;
+}
+@media (min-width: 768px) {
+  .header_headline {
+    padding: 72px;
+  }
 }
 .header_headline .icon {
   width: 60px;
@@ -69,7 +77,13 @@ body {
   text-align: left;
 }
 .about_skills p span {
-  float: right;
+  display: none;
+}
+@media (min-width: 768px) {
+  .about_skills p span {
+    display: inline;
+    float: right;
+  }
 }
 .projects_header,
 .projects_list {
@@ -101,23 +115,50 @@ body {
   box-sizing: border-box;
   padding: 12px;
 }
-.projects_list_item .col:first-child {
-  padding-right: 16px;
+@media (min-width: 768px) {
+  .projects_list_item .col:first-child {
+    padding-right: 16px;
+  }
 }
 .projects_list_item img {
   margin: 0;
   -webkit-border-top-left-radius: 3px;
   -moz-border-radius-topleft: 3px;
   border-top-left-radius: 3px;
-  -webkit-border-bottom-left-radius: 3px;
-  -moz-border-radius-bottomleft: 3px;
-  border-bottom-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-right-radius: 3px;
+}
+@media (min-width: 768px) {
+  .projects_list_item img {
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    border-top-right-radius: 0;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-left-radius: 3px;
+  }
+}
+.projects_list_item .col:last-child {
+  padding: 12px;
+}
+@media (min-width: 768px) {
+  .projects_list_item .col:last-child {
+    padding: 0;
+  }
 }
 .contact {
-  background: #212121 url(../img/contact.jpg);
+  background: #212121 url(../img/contact.jpg) no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
   color: #ffffff;
   text-align: center;
   padding: 96px 0;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .contact {
+    background-image: url(../img/contact@2x.jpg);
+  }
 }
 .contact .typo_h2 {
   margin-bottom: 24px;
@@ -188,6 +229,12 @@ body {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+}
+@media (max-width: 767px) {
+  .modal_dialog {
+    margin: 0;
+    min-height: 100%;
+  }
 }
 .modal_header {
   position: relative;

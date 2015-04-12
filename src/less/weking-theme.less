@@ -41,23 +41,26 @@ body {
 
 // HEADER
 .header {
-  height: 100vh;
-
-  &_img, &_headline {
-    height: 100%;
+  @media (min-width: @screen-sm) {
+    .lh-display(~"flex");
   }
 
   // Image
   &_img {
     background: @grey url(../img/header_img.jpg) no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
+    min-height: 500px;
   }
 
   // Headline
   &_headline {
-    padding: @font-line-height*3;
+    padding: @font-line-height;
     background: @grey900;
     color: @white;
+
+    @media (min-width: @screen-sm) {
+      padding: @font-line-height*3;
+    }
 
     // Icon
     .icon {
@@ -106,7 +109,12 @@ body {
     text-align: left;
 
     p span {
-      float: right;
+      display: none;
+
+      @media (min-width: @screen-sm) {
+        display: inline;
+        float: right;
+      }
     }
   }
 }
@@ -148,13 +156,28 @@ body {
       padding: @font-line-height/2;
 
       .col:first-child {
-        padding-right: @grid-baseline*2;
+        @media (min-width: @screen-sm) {
+          padding-right: @grid-baseline*2;
+        }
       }
 
       img {
         margin: 0;
         .lh-border-top-left-radius(@basic-radius);
-        .lh-border-bottom-left-radius(@basic-radius);
+        .lh-border-top-right-radius(@basic-radius);
+
+        @media (min-width: @screen-sm) {
+          .lh-border-top-right-radius(0);
+          .lh-border-bottom-left-radius(@basic-radius);
+        }
+      }
+
+      .col:last-child {
+        padding: @font-line-height/2;
+
+        @media (min-width: @screen-sm) {
+          padding: 0;
+        }
       }
     }
   }
@@ -162,10 +185,22 @@ body {
 
 // CONTACT
 .contact {
-  background: @grey900 url(../img/contact.jpg);
+  background: @grey900 url(../img/contact.jpg) no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
   color: @white;
   text-align: center;
   padding: @font-line-height*4 0;
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: url(../img/contact@2x.jpg);
+  }
 
   .typo_h2 {
     margin-bottom: @font-line-height;
@@ -250,6 +285,11 @@ body {
   &_dialog {
     padding: 0;
     .lh-border-radius(0);
+
+    @media (max-width: (@screen-sm - 1) ) {
+      margin: 0;
+      min-height: 100%;
+    }
   }
 
   &_header {
