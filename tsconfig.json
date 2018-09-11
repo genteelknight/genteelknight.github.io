@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "es2017",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es2017", "dom"],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "outDir": "dist",
+    "typeRoots": [
+      "./node_modules/@types/"
+    ],
+    "skipLibCheck": true
+  },
+  "compileOnSave": false,
+  "include": [
+    "./src/*"
+  ],
+  "exclude": [
+    "node_modules/*",
+    "**/*-aot.ts"
+  ]
+}

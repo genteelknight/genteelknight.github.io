@@ -1,14 +1,31 @@
+# Project folders and files to ignore
+vendor
+node_modules
+bower_components
+
+.openshift/env/*
+!.openshift/env/.gitkeep
+dist
+
 # Numerous always-ignore extensions
 *.diff
 *.err
 *.orig
-*.log
+*.log*
 *.rej
 *.swo
 *.swp
 *.zip
 *.vi
 *~
+*.lock
+!**/yarn.lock
+!**/composer.lock
+
+# Dotenv
+.env
+.env.*
+!.env.example
 
 # OS or Editor folders
 .DS_Store
@@ -23,10 +40,9 @@ nbproject
 *.sublime-project
 *.sublime-workspace
 .idea
-
-# Komodo
 *.komodoproject
 .komodotools
-
-# Folders to ignore
-node_modules
+.atom
+.vscode
+.directory
+.sql

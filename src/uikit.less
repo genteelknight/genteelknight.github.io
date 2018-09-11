@@ -1,0 +1,27 @@
+@import "../node_modules/uikit/src/less/uikit.theme.less";
+
+// Customize buttons:disabled
+.hook-button-disabled() {
+  opacity: 0.5;
+}
+
+label {
+  cursor: pointer;
+}
+
+b, strong {
+  font-weight: 500;
+}
+
+.uk-text-bold {
+  font-weight: 700 !important;
+}
+
+// Customize table
+// fix bug in edge
+@supports (-ms-ime-align:auto) {
+  .uk-table-shrink {
+    width: 1%;
+  }
+}
+// End fix
