@@ -10,10 +10,17 @@
   "license": "UNLICENSED",
   "main": "dist/index.js",
   "dependencies": {
+    "@types/jquery": "^3.3.6",
+    "@types/lodash": "^4.14.116",
+    "@types/node": "^10.9.4",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.11",
     "typeit": "^5.10.6",
-    "uikit": "^3.0.0-rc.15"
+    "uikit": "^3.0.0-rc.16"
   },
   "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "concurrently": "^4.0.1",
     "gh-pages": "^1.2.0",
     "husky": "^1.0.0-rc.13",
     "less": "^3.8.1",
@@ -27,9 +34,10 @@
   },
   "scripts": {
     "lint": "tslint ./src/*.ts",
-    "start": "parcel serve src/index.html --open",
+    "start": "concurrently -k -p '[{name}]' -n 'parcel,browsersync' -c 'gray.bold,red.bold' 'npm run watch' 'npm run serve'",
+    "serve": "browser-sync start --config bs-config.js",
     "build": "NODE_ENV=production parcel build src/index.html --public-url .",
-    "watch": "parcel watch src/index.html",
+    "watch": "parcel watch src/index.html --no-hmr",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
@@ -38,7 +46,7 @@
     "url": "git@github.com:hustlahusky/hustlahusky.github.io.git"
   },
   "prettier": {
-    "print-width": 100,
+    "printWidth": 100,
     "singleQuote": true,
     "trailingComma": "all",
     "arrowParens": "avoid"
