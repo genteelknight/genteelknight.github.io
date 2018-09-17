@@ -95,7 +95,7 @@
 			</div>
 
 			<div class="uk-text-center">
-				<a href="#" class="uk-button uk-button-primary uk-button-large">Обсудить проект</a>
+				<a href="#Contact" uk-scroll class="uk-button uk-button-primary uk-button-large">Обсудить проект</a>
 			</div>
 		</div>
 	</section>
@@ -183,6 +183,66 @@
 						<span class="uk-button uk-button-default uk-button-small">GitHub Flow</span>
 					</p>
 				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="Contact" id="Contact">
+		<div class="uk-container uk-container-center">
+			<div class="uk-heading-line uk-text-center">
+				<h2 class="uk-text-uppercase">Обсудить проект</h2>
+			</div>
+
+			<div class="uk-width-2-3 uk-margin-auto">
+				<div id="ContactSuccess" class="uk-alert-primary uk-hidden" uk-alert>
+					<a class="uk-alert-close" uk-close></a>
+					<p>Спасибо за Ваше сообщение. Ждите ответа на указанный E-mail.</p>
+				</div>
+
+				<form action="https://getsimpleform.com/messages?form_api_token=5f6c89141cc2898adb0d2994abd2c078" method="post" class="ContactForm uk-form-stacked uk-margin-medium">
+					<input type="hidden" name="redirect_to">
+
+					<div class="uk-margin">
+						<label class="uk-form-label" for="name">Ваше имя</label>
+						<div class="uk-form-controls">
+							<input class="uk-input" id="name" name="name" type="text" placeholder="Как Вас зовут?" required>
+						</div>
+					</div>
+
+					<div class="uk-margin">
+						<label class="uk-form-label" for="email">Ваш e-mail</label>
+						<div class="uk-form-controls">
+							<input class="uk-input" id="email" name="email" type="email" placeholder="E-mail для связи с Вами" required>
+						</div>
+					</div>
+
+					<div class="uk-margin">
+						<label class="uk-form-label" for="message">Сообщение</label>
+						<div class="uk-form-controls">
+							<textarea class="uk-textarea" name="message" id="message" placeholder="Опишите суть Вашего проекта" style="min-width: 100%; min-height: 250px;"></textarea>
+						</div>
+					</div>
+
+					<div class="uk-margin">
+						<div class="uk-form-controls uk-text-center">
+							<button class="uk-button uk-button-primary uk-button-large" type="submit">Отправить</button>
+						</div>
+					</div>
+
+					<div class="uk-margin-medium">
+						<div class="uk-form-controls uk-text-center">
+							<p class="uk-margin-medium">Также для связи со мной можете воспользоваться любой удобной для Вас соцсетью</p>
+
+							<div class="Socials">
+								<a class="Socials_item Socials_item--vk uk-icon-button uk-icon-image" rel="nofollow noopener" target="_blank" href="https://vk.com/hustlahusky"></a>
+								<a class="Socials_item Socials_item--instagram uk-icon-button" rel="nofollow noopener" target="_blank" href="https://www.instagram.com/hustlahusky"
+									uk-icon="icon: instagram; ratio: 1.5"></a>
+								<a class="Socials_item Socials_item--linkedin uk-icon-button" rel="nofollow noopener" target="_blank" href="https://www.linkedin.com/in/constantine-karnaukhov-58ba45130/"
+									uk-icon="icon: linkedin; ratio: 1.5"></a>
+							</div>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
 	</section>
