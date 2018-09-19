@@ -1,4 +1,5 @@
 @socials-color-vk: #4a76a8;
+@socials-color-telegram: #179cde;
 @socials-color-instagram: #e1306c;
 @socials-color-linkedin: #007bb6;
 @socials-color-github: #24292e;
@@ -7,11 +8,11 @@
 .Socials {
   &_item {
     &--vk {
-      background-image: url('./vk.png');
-      background-size: 55%;
-      background-repeat: no-repeat;
-      background-position: center;
       .socialBtnColor(@socials-color-vk);
+    }
+
+    &--telegram {
+      .socialBtnColor(@socials-color-telegram);
     }
 
     &--instagram {

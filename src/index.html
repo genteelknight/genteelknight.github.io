@@ -12,6 +12,9 @@
 	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="style.less">
 
+	<link id="vk-logo-svg" rel="preload" href="./iconmonstr-vk-1.svg" as="image">
+	<link id="telegram-logo-svg" rel="preload" href="./iconmonstr-telegram-1.svg" as="image">
+
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -41,18 +44,7 @@
 			<div class="About_caption">
 				<h1 class="uk-heading-primary">Константин Карнаухов</h1>
 				<p class="About_lead uk-text-lead">Разрабатываю веб-сервисы любой сложности</p>
-
-				<div class="Socials">
-					<a class="Socials_item Socials_item--vk uk-icon-button uk-icon-image" rel="nofollow noopener" target="_blank" href="https://vk.com/hustlahusky"></a>
-					<a class="Socials_item Socials_item--instagram uk-icon-button" rel="nofollow noopener" target="_blank" href="https://www.instagram.com/hustlahusky"
-					 uk-icon="icon: instagram; ratio: 1.5"></a>
-					<a class="Socials_item Socials_item--github uk-icon-button" rel="nofollow noopener" target="_blank" href="https://www.instagram.com/hustlahusky"
-					 uk-icon="icon: github; ratio: 1.5"></a>
-					<a class="Socials_item Socials_item--linkedin uk-icon-button" rel="nofollow noopener" target="_blank" href="https://www.linkedin.com/in/constantine-karnaukhov-58ba45130/"
-					 uk-icon="icon: linkedin; ratio: 1.5"></a>
-					<a class="Socials_item Socials_item--mail uk-icon-button uk-button-primary" rel="nofollow noopener" target="_blank"
-					 href="mailto:genteelknight@gmail.com" uk-icon="icon: mail; ratio: 1.5"></a>
-				</div>
+				<div class="Socials"></div>
 			</div>
 		</div>
 	</section>
@@ -232,14 +224,7 @@
 					<div class="uk-margin-medium">
 						<div class="uk-form-controls uk-text-center">
 							<p class="uk-margin-medium">Также для связи со мной можете воспользоваться любой удобной для Вас соцсетью</p>
-
-							<div class="Socials">
-								<a class="Socials_item Socials_item--vk uk-icon-button uk-icon-image" rel="nofollow noopener" target="_blank" href="https://vk.com/hustlahusky"></a>
-								<a class="Socials_item Socials_item--instagram uk-icon-button" rel="nofollow noopener" target="_blank" href="https://www.instagram.com/hustlahusky"
-									uk-icon="icon: instagram; ratio: 1.5"></a>
-								<a class="Socials_item Socials_item--linkedin uk-icon-button" rel="nofollow noopener" target="_blank" href="https://www.linkedin.com/in/constantine-karnaukhov-58ba45130/"
-									uk-icon="icon: linkedin; ratio: 1.5"></a>
-							</div>
+							<div class="Socials" data-socials='["vk","telegram","instagram","linkedin"]'></div>
 						</div>
 					</div>
 				</form>
