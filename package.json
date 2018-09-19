@@ -44,7 +44,7 @@
     "build": "NODE_ENV=production parcel build src/index.html --public-url .",
     "watch": "parcel watch src/index.html --no-hmr",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -b master"
   },
   "repository": {
     "type": "git",
