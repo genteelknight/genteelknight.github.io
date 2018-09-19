@@ -1,18 +1,38 @@
 .Header {
   min-height: 100vh;
   padding: 75px 0;
-  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25), 0 0 25px rgba(0, 0, 0, 0.5);
+  background: url('./hero-bg.jpg') no-repeat top center;
+  background-size: cover;
+
+  &Logo {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+
+    @media (min-width: @breakpoint-medium) {
+      font-size: 6rem;
+    }
+  }
 
   &Scroll {
     height: 75px;
   }
-}
 
-.HeaderLogo {
-  font-size: 6rem;
-  line-height: 1;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #fff;
-  text-align: center;
+  &Logo,
+  &Scroll {
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: fade(@global-primary-background, 80%);
+  }
 }

@@ -56,5 +56,5 @@ $('.Socials').each((a, block) => {
     `)
     .join('');
 
-  $block.html(html);
+  $block.html(html).addClass(`Socials--count-${Object.keys(socials).length}`);
 });

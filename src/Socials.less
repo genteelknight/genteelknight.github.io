@@ -7,6 +7,8 @@
 
 .Socials {
   &_item {
+    margin-bottom: 10px;
+
     &--vk {
       .socialBtnColor(@socials-color-vk);
     }
@@ -30,6 +32,19 @@
 
   .uk-button-primary {
     .socialBtnColor(@button-primary-background);
+  }
+
+  @media (max-width: @breakpoint-small-max) {
+    display: grid;
+    justify-items: center;
+
+    &&--count-6 {
+      grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+
+    &&--count-4 {
+      grid-template-columns: 25% 25% 25% 25%;
+    }
   }
 }
 
