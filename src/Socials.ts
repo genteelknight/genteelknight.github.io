@@ -15,7 +15,7 @@ const SOCIALS = {
     icon: 'instagram',
   },
   github: {
-    link: 'https://www.instagram.com/hustlahusky',
+    link: 'https://github.com/hustlahusky',
     icon: 'github',
   },
   linkedin: {
@@ -43,17 +43,29 @@ $('.Socials').each((a, block) => {
   }
 
   const html = Object.keys(socials)
-    .map(i => `
+    .map(
+      i => `
       <a
         href="${socials[i].link}"
         rel="nofollow noopener"
         target="_blank"
-        class="Socials_item Socials_item--${i} uk-icon-button${socials[i].classList && socials[i].classList.length ? socials[i].classList.reduce((a: string, c: string) => `${a} ${c}`, '') : '' }"
+        class="Socials_item Socials_item--${i} uk-icon-button${
+        socials[i].classList && socials[i].classList.length
+          ? socials[i].classList.reduce((a: string, c: string) => `${a} ${c}`, '')
+          : ''
+      }"
         ${!socials[i].icon.startsWith('#') ? `uk-icon="icon: ${socials[i].icon}; ratio: 1.5"` : ''}
       >
-        ${socials[i].icon.startsWith('#') ? `<img uk-svg="width: 30; height: 30;" src="${document.querySelector(socials[i].icon).href}">` : ''}
+        ${
+          socials[i].icon.startsWith('#')
+            ? `<img uk-svg="width: 30; height: 30;" src="${
+                document.querySelector(socials[i].icon).href
+              }">`
+            : ''
+        }
       </a>
-    `)
+    `,
+    )
     .join('');
 
   $block.html(html).addClass(`Socials--count-${Object.keys(socials).length}`);
