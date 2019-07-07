@@ -1,5 +1,5 @@
-import { UIkit } from './vendor';
-import $ = require('jquery');
+import UIkit from './vendor/uikit';
+import $ from './vendor/jquery';
 
 const successHash = '#ContactSuccess';
 const redirectTo: HTMLInputElement = document.querySelector('.ContactForm [name=redirect_to]');

@@ -1,5 +1,5 @@
-import $ = require('jquery');
-import * as _ from 'lodash';
+import $ from './vendor/jquery';
+import _ from './vendor/lodash';
 
 const SOCIALS = {
   vk: {
@@ -29,7 +29,7 @@ const SOCIALS = {
   },
 };
 
-$('.Socials').each((a, block) => {
+$('.Socials').each((a: number, block: HTMLElement) => {
   const $block = $(block);
   const params = $block.data();
 

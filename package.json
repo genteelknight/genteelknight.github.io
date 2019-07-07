@@ -10,15 +10,16 @@
   "license": "UNLICENSED",
   "main": "dist/index.js",
   "dependencies": {
-    "@types/gravatar": "^1.4.28",
     "@types/jquery": "^3.3.22",
     "@types/lodash": "^4.14.118",
     "@types/node": "^10.12.10",
     "chart.js": "^2.7.3",
-    "gravatar": "^1.8.0",
-    "jquery": "^3.3.1",
-    "lodash": "^4.17.11",
-    "typeit": "^6.0.2",
+    "gravatar-url": "^3.0.1",
+    "jquery": "^3.4.1",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.escape": "^4.0.1",
+    "lodash.pick": "^4.4.0",
+    "typeit": "^5.10.7",
     "uikit": "^3.1.4"
   },
   "devDependencies": {
@@ -34,7 +35,7 @@
     "tslint": "^5.16.0",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.4.5"
+    "typescript": "^3.5.2"
   },
   "scripts": {
     "lint": "tslint ./src/*.ts",

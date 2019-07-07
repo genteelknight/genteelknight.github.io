@@ -1,5 +1,5 @@
-import { Chart } from './vendor';
-import $ = require('jquery');
+import Chart from './vendor/chart';
+import $ from './vendor/jquery';
 
 const $chartCanvas = $('.Skills_chart-canvas');
 
