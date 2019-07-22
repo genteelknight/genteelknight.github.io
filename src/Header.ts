@@ -1,6 +1,7 @@
 import TypeIt from './vendor/typeit';
 import _ from './vendor/lodash';
 import $ from './vendor/jquery';
+import UIkit from './vendor/uikit';
 
 const headerLogo = $('.HeaderLogo');
 
@@ -13,10 +14,13 @@ const replaceStrings = headerLogo.data('replace-text').map((a: string) => _.esca
 
 headerLogo.get(0).innerHTML = null;
 
-const writeTypes = new TypeIt(headerLogo.get(0), {
+const $headerScroll = $('.HeaderScroll');
+UIkit.scroll($headerScroll, { duration: 250, offset: 75 });
+
+new TypeIt(headerLogo.get(0), {
   speed: 50,
   waitUntilVisible: true,
-  afterComplete: () => $('.HeaderScroll').removeClass('uk-invisible'),
+  afterComplete: () => $headerScroll.removeClass('uk-invisible'),
 })
   .type(strings[0])
   .break()
@@ -27,11 +31,7 @@ const writeTypes = new TypeIt(headerLogo.get(0), {
   .break()
   .type(replaceStrings[1]);
 
-$(window)
-  .on('load', () => {
-    writeTypes.go();
-  })
-  .one('scroll', () => {
-    if (window.scrollY > $('.Header').height()) return;
-    // $('html, body').animate({ scrollTop: $('.About').offset().top - 75 }, 250);
-  });
+$(window).one('scroll', () => {
+  if (window.scrollY > $('.Header').height()) return;
+  UIkit.scroll($headerScroll).scrollTo('.About');
+});

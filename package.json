@@ -10,6 +10,7 @@
   "license": "UNLICENSED",
   "main": "dist/index.js",
   "dependencies": {
+    "@babel/runtime": "^7.5.1",
     "@types/jquery": "^3.3.22",
     "@types/lodash": "^4.14.118",
     "@types/node": "^10.12.10",
@@ -19,18 +20,22 @@
     "lodash.clonedeep": "^4.5.0",
     "lodash.escape": "^4.0.1",
     "lodash.pick": "^4.4.0",
+    "lodash.template": "^4.5.0",
     "typeit": "^5.10.7",
     "uikit": "^3.1.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/plugin-transform-runtime": "^7.5.0",
     "autoprefixer": "^9.5.1",
-    "browser-sync": "^2.26.4",
+    "browser-sync": "^2.26.7",
     "concurrently": "^4.1.0",
     "gh-pages": "^1.2.0",
     "husky": "^2.0.0",
     "less": "^3.9.0",
     "lint-staged": "^7.3.0",
     "parcel-bundler": "^1.12.3",
+    "parcel-plugin-bundle-visualiser": "^1.2.0",
     "prettier": "^1.17.0",
     "tslint": "^5.16.0",
     "tslint-config-airbnb": "^5.11.1",
@@ -40,16 +45,19 @@
   "scripts": {
     "lint": "tslint ./src/*.ts",
     "start": "concurrently -k -p '[{name}]' -n 'parcel,browsersync' -c 'gray.bold,red.bold' 'npm run watch' 'npm run serve'",
-    "serve": "browser-sync start --config bs-config.js",
+    "serve": "browser-sync start --config browsersync.js",
     "prebuild": "rm -rf dist/*",
-    "build": "NODE_ENV=production parcel build src/index.html --public-url .",
+    "build": "NODE_ENV=production parcel build --no-source-maps --public-url . src/index.html",
     "watch": "parcel watch src/index.html --no-hmr",
-    "predeploy": "npm run build && cp CNAME dist/",
+    "predeploy": "npm run build && cp CNAME dist/ && rm -f dist/report.html",
     "deploy": "gh-pages -d dist -b master"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:hustlahusky/hustlahusky.github.io.git"
+  },
+  "alias": {
+    "moment": false
   },
   "prettier": {
     "printWidth": 100,

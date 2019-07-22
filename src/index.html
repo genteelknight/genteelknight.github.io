@@ -27,13 +27,13 @@
 				&lt;Hustla&nbsp;<br>
 				Husky/&gt;
 			</div>
-			<div class="HeaderScroll uk-invisible uk-position-bottom">
-				<div class="icon-scroll"></div>
-			</div>
+			<a href="#about" class="HeaderScroll uk-invisible uk-position-bottom">
+				<span class="icon-scroll"></span>
+			</a>
 		</div>
 	</header>
 
-	<section class="About uk-text-center">
+	<section id="about" class="About uk-text-center">
 		<div class="uk-container uk-container-center">
 			<div class="About_avatar uk-margin-medium-bottom"></div>
 			<div class="About_caption">
@@ -50,7 +50,7 @@
 				<h2 class="uk-text-uppercase">Что предлагаю?</h2>
 			</div>
 
-			<div class="uk-child-width-1-1 uk-child-width-1-3@m uk-margin-medium" uk-grid>
+			<div class="uk-grid uk-child-width-1-1 uk-child-width-1-3@m uk-margin-medium" uk-grid>
 				<article>
 					<div class="uk-h3 uk-text-center">Разработка</div>
 					<p class="uk-text-justify">
@@ -99,7 +99,7 @@
 				<canvas class="Skills_chart-canvas" width="400" height="400"></canvas>
 			</div>
 
-			<div class="uk-child-width-1-1 uk-child-width-1-2@m uk-child-width-1-3@l uk-margin-medium" uk-grid>
+			<div class="uk-grid uk-child-width-1-1 uk-child-width-1-2@m uk-child-width-1-3@l uk-margin-medium" uk-grid>
 				<article class="Skills_item uk-text-center" data-skill-level="70">
 					<div class="Skills_item-title">Frontend</div>
 					<p uk-margin>
@@ -176,6 +176,31 @@
 		</div>
 	</section>
 
+	<section class="Projects uk-hidden" id="Projects">
+		<div class="uk-container uk-container-center">
+			<div class="uk-heading-line uk-text-center">
+				<h2 class="uk-text-uppercase uk-margin-remove-bottom">Проекты</h2>
+			</div>
+			<p class="uk-text-lead uk-text-center">Поддержите OpenSource проекты, над которыми я работаю, звездой на Github</p>
+
+			<script type="text/html" class="Projects-template">
+				<div class="uk-grid uk-grid-small uk-child-width-1-2 uk-child-width-1-3@l uk-margin-medium-top" uk-grid uk-height-match="target: > * > .uk-card; row: false">
+					<% projects.forEach(function(project) { %>
+						<div>
+							<article class="uk-card uk-card-body uk-card-hover">
+								<h3 class="uk-h4"><a href="<%= project.url %>" target="_blank"><%= project.nameWithOwner %></a></h3>
+								<p><%= project.description %></p>
+								<a href="<%= project.url %>" class="uk-button uk-button-small uk-button-default" target="_blank">
+									<span uk-icon="icon: github; width: 22"></span> Поставить звезду
+								</a>
+							</article>
+						</div>
+					<% }) %>
+				</div>
+			</script>
+		</div>
+	</section>
+
 	<section class="Contact" id="Contact">
 		<div class="uk-container uk-container-center">
 			<div class="uk-heading-line uk-text-center">
@@ -183,32 +208,32 @@
 			</div>
 
 			<div class="uk-width-2-3@m uk-margin-auto">
-				<div id="ContactSuccess" class="uk-alert-primary uk-hidden" uk-alert>
-					<a class="uk-alert-close" uk-close></a>
-					<p>Спасибо за Ваше сообщение. Ждите ответа на указанный E-mail.</p>
-				</div>
+				<script id="contactFormAlertTemplate" type="text/html">
+					<div class="uk-alert uk-alert-<%- status %>" uk-alert>
+						<a class="uk-alert-close" uk-close></a>
+						<p><%- text %></p>
+					</div>
+				</script>
 
-				<form action="https://getsimpleform.com/messages?form_api_token=5f6c89141cc2898adb0d2994abd2c078" method="post" class="ContactForm uk-form-stacked uk-margin-medium">
-					<input type="hidden" name="redirect_to">
-
+				<form action="#" method="post" class="ContactForm uk-form-stacked uk-margin-medium">
 					<div class="uk-margin">
 						<label class="uk-form-label" for="name">Ваше имя</label>
 						<div class="uk-form-controls">
-							<input class="uk-input" id="name" name="name" type="text" placeholder="Как Вас зовут?" required>
+							<input class="uk-input" id="name" name="soform-name" type="text" placeholder="Как Вас зовут?" required>
 						</div>
 					</div>
 
 					<div class="uk-margin">
 						<label class="uk-form-label" for="email">Ваш e-mail</label>
 						<div class="uk-form-controls">
-							<input class="uk-input" id="email" name="email" type="email" placeholder="E-mail для связи с Вами" required>
+							<input class="uk-input" id="email" name="soform-email" type="email" placeholder="E-mail для связи с Вами" required>
 						</div>
 					</div>
 
 					<div class="uk-margin">
 						<label class="uk-form-label" for="message">Сообщение</label>
 						<div class="uk-form-controls">
-							<textarea class="uk-textarea" name="message" id="message" placeholder="Опишите суть Вашего проекта" style="min-width: 100%; min-height: 250px;"></textarea>
+							<textarea class="uk-textarea" id="message" name="soform-message" placeholder="Опишите суть Вашего проекта" style="min-width: 100%; min-height: 250px;"></textarea>
 						</div>
 					</div>
 
